@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "Exposure2Tumor",
+    "slug": "exposure2tumor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "exposure2tumor",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E1A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.exposure2tumor.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Exposure2Tumor uses your location to show local cancer-risk and environmental exposure data.",
+        "NSCameraUsageDescription": "Exposure2Tumor uses the camera for clinical photo capture and documentation.",
+        "NSPhotoLibraryUsageDescription": "Exposure2Tumor accesses your photos for clinical documentation."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.exposure2tumor.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      "expo-camera",
+      "expo-image-picker",
+      "expo-secure-store",
+      "expo-font",
+      "expo-notifications",
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true
+        }
+      ]
+    ]
+  }
+}
