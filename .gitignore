@@ -6,3 +6,4 @@ web-build/
 ts-errors.txt
 scripts/
 .DS_Store
+.vercel
